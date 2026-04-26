@@ -1,51 +1,62 @@
-import Dot, { Cmd } from "./shared"
-import { ABOUT_META } from "../data/about"
+import { Cmd } from "./shared"
+import { ABOUT_ID, ABOUT_IDENTITY } from "../data/about"
 
 export default function About() {
   return (
     <section id="about" className="mt-12 sm:mt-14 scroll-mt-24">
       <Cmd cmd="cat about.md" />
-      <div className="mt-5 grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 lg:gap-10">
-        <div className="font-mono font-thin text-lg leading-[1.75] text-term-fg max-w-[62ch]">
+      <div className="mt-5 grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 sm:gap-8 lg:gap-10 items-start">
+        <div className="font-mono font-thin text-base sm:text-lg leading-[1.75] text-term-fg max-w-[62ch]">
           <div className="text-term-dimmer italic mb-3 text-sm"># About</div>
           <p className="mb-4">
-            I build software the way I like to use it —{" "}
-            <span className="text-amber-accent">fast, intentional, and a little opinionated</span>.
+            I&apos;m a software engineer with a passion for building{" "}
+            <span className="text-amber-accent">modern digital products</span> and solving real-world
+            problems through technology.
           </p>
           <p className="mb-4">
-            I move fluently between{" "}
-            <span className="text-amber-accent">Laravel APIs</span> and{" "}
-            <span className="text-amber-accent">React interfaces</span>, designing schemas that scale,
-            endpoints that don&apos;t leak, and UIs that feel responsive down to the millisecond.
-          </p>
-          <p className="mb-4">
-            I care less about stack debates and more about{" "}
-            <span className="text-amber-accent">shipping</span> — writing code other engineers can read
-            at 2 AM, refactoring without fear, and treating performance and user experience as the same
-            conversation.
+            I enjoy working across the full development process — from{" "}
+            <span className="text-amber-accent">schema design</span> and{" "}
+            <span className="text-amber-accent">API architecture</span> to{" "}
+            <span className="text-amber-accent">polished UI</span> — and I&apos;m continuously learning
+            new tools and approaches.
           </p>
           <p className="m-0">
-            <span className="text-amber-accent">Curious by default</span>, allergic to bloat, and always
-            one deploy away from learning something new.
+            With a few years of experience, I focus on creating{" "}
+            <span className="text-amber-accent">efficient</span>,{" "}
+            <span className="text-amber-accent">user-friendly</span>, and{" "}
+            <span className="text-amber-accent">scalable</span> solutions.
           </p>
         </div>
 
-        <div className="font-mono text-sm h-full flex flex-col justify-between lg:border-l lg:border-term-border lg:pl-6">
-          {ABOUT_META.map(([k, v], i) => (
-            <div
-              key={k}
-              className={`flex justify-between items-baseline flex-1 ${i === ABOUT_META.length - 1 ? "" : "border-b border-dotted border-term-border"
-                }`}
-            >
-              <span className="text-term-dimmer tracking-[0.08em]">{k}</span>
-              <span
-                className={`flex items-center gap-1.5 ${k === "status" ? "text-amber-accent" : "text-term-fg"
-                  }`}
-              >
-                {k === "status" && <Dot size={7} />} {v}
+        <div className="w-full max-w-md mx-auto lg:max-w-none lg:mx-0">
+          <div className="rounded-[4px] border border-term-border bg-ink-panel/60 p-4 sm:p-5">
+            <div className="flex items-baseline justify-between gap-3">
+              <span className="font-mono text-xs sm:text-[13px] text-amber-accent tracking-[0.12em]">
+                // IDENTITY
+              </span>
+              <span className="font-mono text-[10px] sm:text-xs text-term-dimmer tabular-nums">
+                {ABOUT_ID}
               </span>
             </div>
-          ))}
+
+            <div className="mt-3 sm:mt-4 border-t border-dotted border-term-border" />
+
+            <dl className="mt-3 sm:mt-4 font-mono text-xs sm:text-sm flex flex-col">
+              {ABOUT_IDENTITY.map(([k, v]) => (
+                <div
+                  key={k}
+                  className="flex items-baseline justify-between gap-3 py-2 sm:py-2.5"
+                >
+                  <dt className="text-term-dimmer tracking-[0.04em] flex-shrink-0">
+                    {k}
+                  </dt>
+                  <dd className="text-term-fg text-right break-words">
+                    {v}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </div>
     </section>
