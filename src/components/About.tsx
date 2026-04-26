@@ -9,22 +9,27 @@ export default function About() {
         <div className="font-mono font-thin text-base sm:text-lg leading-[1.75] text-term-fg max-w-[62ch]">
           <div className="text-term-dimmer italic mb-3 text-sm"># About</div>
           <p className="mb-4">
-            I&apos;m a software engineer with a passion for building{" "}
-            <span className="text-amber-accent">modern digital products</span> and solving real-world
-            problems through technology.
+            I build software the way I like to use it —{" "}
+            <span className="text-amber-accent">fast</span>,{" "}
+            <span className="text-amber-accent">intentional</span>, and a little{" "}
+            <span className="text-amber-accent">opinionated</span>.
           </p>
           <p className="mb-4">
-            I enjoy working across the full development process — from{" "}
-            <span className="text-amber-accent">schema design</span> and{" "}
-            <span className="text-amber-accent">API architecture</span> to{" "}
-            <span className="text-amber-accent">polished UI</span> — and I&apos;m continuously learning
-            new tools and approaches.
+            I move fluently between <span className="text-amber-accent">Laravel APIs</span> and{" "}
+            <span className="text-amber-accent">React interfaces</span>, designing schemas that
+            scale, endpoints that don&apos;t leak, and UIs that feel responsive{" "}
+            <span className="text-amber-accent">down to the millisecond</span>.
+          </p>
+          <p className="mb-4">
+            I care less about stack debates and more about{" "}
+            <span className="text-amber-accent">shipping</span> — writing code other engineers can
+            read at 2 AM, refactoring without fear, and treating{" "}
+            <span className="text-amber-accent">performance</span> and{" "}
+            <span className="text-amber-accent">user experience</span> as the same conversation.
           </p>
           <p className="m-0">
-            With a few years of experience, I focus on creating{" "}
-            <span className="text-amber-accent">efficient</span>,{" "}
-            <span className="text-amber-accent">user-friendly</span>, and{" "}
-            <span className="text-amber-accent">scalable</span> solutions.
+            <span className="text-amber-accent">Curious by default</span>, allergic to bloat, and
+            always one deploy away from learning something new.
           </p>
         </div>
 

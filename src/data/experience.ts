@@ -1,5 +1,5 @@
 export const EXPERIENCE = {
-  title: "Backend Developer",
+  title: "Freelance Backend Developer",
   company: "Doomz",
   period: "JUN 2025 → JAN 2026",
   bullets: [
@@ -9,5 +9,5 @@ export const EXPERIENCE = {
     "Designed the complete order lifecycle and commission engine",
     "Integrated UPayment for secure, seamless end-to-end payment processing",
   ],
-  tags: ["Laravel 12", "PHP 8.4", "REST API", "Filament", "JWT"],
+  tags: ["Laravel", "PHP", "MySQL", "REST API", "Filament", "JWT"],
 } as const
