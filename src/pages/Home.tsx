@@ -7,30 +7,49 @@ import Experience from "../components/Experience"
 import Education from "../components/Education"
 import Projects from "../components/Projects"
 import Contact from "../components/Contact"
+import Reveal from "../components/Reveal"
 
 export default function Home() {
   return (
     <>
       <section className="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-[1fr_320px] lg:gap-12 lg:items-start">
         <div className="lg:col-start-1 lg:row-start-1">
-          <Hero />
+          <Reveal direction="left">
+            <Hero />
+          </Reveal>
         </div>
 
         <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2 mx-auto w-full max-w-[340px] sm:max-w-[400px] md:max-w-[440px] lg:max-w-none lg:w-[320px] lg:sticky lg:top-24">
-          <Photo />
+          <Reveal direction="right" delay={100}>
+            <Photo />
+          </Reveal>
         </div>
 
         <div className="lg:col-start-1 lg:row-start-2">
-          <StatsBlock />
+          <Reveal direction="left" delay={80}>
+            <StatsBlock />
+          </Reveal>
         </div>
       </section>
 
-      <About />
-      <Skills />
-      <Experience />
-      <Education />
-      <Projects />
-      <Contact />
+      <Reveal direction="left">
+        <About />
+      </Reveal>
+      <Reveal direction="right">
+        <Skills />
+      </Reveal>
+      <Reveal direction="left">
+        <Experience />
+      </Reveal>
+      <Reveal direction="right">
+        <Education />
+      </Reveal>
+      <Reveal direction="left">
+        <Projects />
+      </Reveal>
+      <Reveal direction="right">
+        <Contact />
+      </Reveal>
     </>
   )
 }
