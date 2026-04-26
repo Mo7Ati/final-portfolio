@@ -18,18 +18,23 @@ export default function Contact() {
 
   return (
     <section id="contact" className="mt-12 sm:mt-14 scroll-mt-24">
-      <Cmd cmd="cat ./get_in_touch" />
+      <Cmd cmd="./reach_out --channel=open" />
 
       <div className="mt-6 max-w-[760px] mx-auto text-center">
         <div className="font-mono text-xs text-term-dimmer tracking-[0.15em] mb-2">
-          <span className="text-amber-accent">// </span>GET IN TOUCH
+          <span className="text-amber-accent">// </span>OPEN CHANNEL · HANDSHAKE READY
         </div>
         <h2 className="font-mono text-2xl sm:text-3xl text-term-fg font-semibold mb-3">
           <span className="text-amber-accent mr-2">&gt;</span>
-          let&apos;s build something
+          let&apos;s build something{" "}
+          <span className="text-amber-accent">worth shipping</span>
+          <span className="text-amber-accent animate-blink ml-1">_</span>
         </h2>
-        <p className="font-mono text-sm text-term-dim leading-[1.7] max-w-[56ch] mx-auto mb-7">
-          Open to new projects and freelance work. Drop a line — I usually reply within a day.
+        <p className="font-mono text-sm text-term-dim leading-[1.7] max-w-[58ch] mx-auto mb-7">
+          Got a <span className="text-term-fg">bold idea</span>, a{" "}
+          <span className="text-term-fg">stubborn bug</span>, or just want to nerd out over
+          architecture? My inbox is always open — and I usually{" "}
+          <span className="text-amber-accent">reply within 24h</span>.
         </p>
 
         <button
@@ -58,7 +63,7 @@ export default function Contact() {
               (copied ? "text-amber-accent" : "text-term-dimmer")
             }
           >
-            {copied ? "copied ✓" : "click to copy"}
+            {copied ? "Copied ✓" : "Tap to copy"}
           </span>
         </button>
 
@@ -74,12 +79,12 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 aria-label={`${label} (opens in a new tab)`}
                 className={
-                  "inline-flex items-center justify-center w-11 h-11 rounded-full " +
+                  "inline-flex items-center justify-center w-14 h-14 rounded-full " +
                   "border border-term-border bg-ink-chip text-term-dim no-underline " +
                   "transition-[color,border-color,background,box-shadow,transform] duration-200 " +
                   "hover:text-amber-accent hover:border-amber-accent hover:bg-amber-soft hover:-translate-y-[1px] " +
                   "focus-visible:outline-none focus-visible:text-amber-accent focus-visible:border-amber-accent focus-visible:shadow-[0_0_0_2px_rgba(255,180,84,0.3)] " +
-                  "max-[400px]:w-10 max-[400px]:h-10"
+                  "max-[400px]:w-12 max-[400px]:h-12"
                 }
               >
                 <SocialIcon id={id} />
@@ -87,13 +92,6 @@ export default function Contact() {
             </li>
           ))}
         </ul>
-
-        <div className="mt-8 inline-flex items-center gap-2 font-mono text-xs text-term-dim py-1.5 px-3 rounded-[3px] border border-term-border bg-ink-chip">
-          <span className="inline-block w-2 h-2 rounded-full bg-amber-accent shadow-dot-glow animate-pulse-dot" />
-          <span>
-            Currently <span className="text-term-fg font-medium">available</span> for new projects
-          </span>
-        </div>
       </div>
     </section>
   )
