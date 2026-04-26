@@ -1,7 +1,9 @@
+import type { ReactNode } from "react"
+import type { SocialId } from "../data/contact"
 
 const size = 22
 
-function Svg(props) {
+function Svg({ children, title }: { children: ReactNode; title?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,18 +11,20 @@ function Svg(props) {
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      aria-hidden={props.title ? undefined : true}
+      aria-hidden={title ? undefined : true}
       focusable="false"
     >
-      {props.title ? <title>{props.title}</title> : null}
-      {props.children}
+      {title ? <title>{title}</title> : null}
+      {children}
     </svg>
   )
 }
 
-export function SocialIcon({ id }) {
+type SocialIconProps = { id: SocialId }
+
+export function SocialIcon({ id }: SocialIconProps) {
   switch (id) {
-    case 'github':
+    case "github":
       return (
         <Svg>
           <path
@@ -29,7 +33,7 @@ export function SocialIcon({ id }) {
           />
         </Svg>
       )
-    case 'linkedin':
+    case "linkedin":
       return (
         <Svg>
           <path
@@ -38,7 +42,7 @@ export function SocialIcon({ id }) {
           />
         </Svg>
       )
-    case 'instagram':
+    case "instagram":
       return (
         <Svg>
           <path
@@ -47,7 +51,7 @@ export function SocialIcon({ id }) {
           />
         </Svg>
       )
-    case 'facebook':
+    case "facebook":
       return (
         <Svg>
           <path
@@ -56,7 +60,7 @@ export function SocialIcon({ id }) {
           />
         </Svg>
       )
-    case 'whatsapp':
+    case "whatsapp":
       return (
         <Svg>
           <path

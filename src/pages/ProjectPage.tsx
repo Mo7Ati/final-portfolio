@@ -1,17 +1,17 @@
-import { useParams, Link, Navigate } from "react-router";
-import { getProjectBySlug } from "../data/projects.js";
-import { Cmd, Chip } from "../components/shared.jsx";
+import { useParams, Link, Navigate } from "react-router"
+import { getProjectBySlug } from "../data/projects"
+import { Cmd, Chip } from "../components/shared"
 
-const isVideoSrc = (src = "") => /\.(mp4|webm|mov|m4v|ogv)(\?.*)?$/i.test(src);
+const isVideoSrc = (src: string) => /\.(mp4|webm|mov|m4v|ogv)(\?.*)?$/i.test(src)
 
 export default function ProjectPage() {
-  const { slug } = useParams();
-  const project = getProjectBySlug(slug);
+  const { slug } = useParams()
+  const project = getProjectBySlug(slug)
 
-  if (!project) return <Navigate to="/" replace />;
+  if (!project) return <Navigate to="/" replace />
 
-  const { media = {}, links = [], sections = [], summary = "" } = project;
-  const gallery = media.gallery || [];
+  const { media, links, sections, summary } = project
+  const gallery = media.gallery
 
   return (
     <>
@@ -111,7 +111,7 @@ export default function ProjectPage() {
                         {isVideoSrc(s.src) ? (
                           <video
                             src={s.src}
-                            poster={s.poster || undefined}
+                            poster={s.poster}
                             controls
                             playsInline
                             preload="metadata"
@@ -195,5 +195,5 @@ export default function ProjectPage() {
         </aside>
       </div>
     </>
-  );
+  )
 }

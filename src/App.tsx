@@ -1,13 +1,13 @@
-import TopChrome from "./components/TopChrome.jsx";
-import ScrollToHash from "./components/ScrollToHash.jsx";
-import Home from "./pages/Home.jsx";
-import ProjectPage from "./pages/ProjectPage.jsx";
+import TopChrome from "./components/TopChrome"
+import ScrollToHash from "./components/ScrollToHash"
+import Home from "./pages/Home"
+import ProjectPage from "./pages/ProjectPage"
 import { BrowserRouter, Routes, Route } from "react-router";
 
 export default function App() {
   return (
     <BrowserRouter>
-      {/* <ScrollToHash /> */}
+      <ScrollToHash />
       <div className="min-h-screen bg-ink-deep text-term-fg bg-ambient">
         <TopChrome />
 

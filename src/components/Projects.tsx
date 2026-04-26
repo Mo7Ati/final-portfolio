@@ -1,13 +1,12 @@
-import { Link } from "react-router";
-import { Cmd } from "./shared.jsx";
-import { PROJECTS } from "../data/projects.js";
+import { Link } from "react-router"
+import { Cmd } from "./shared"
+import { PROJECTS } from "../data/projects"
 
 export default function Projects() {
   return (
     <section id="projects" className="mt-12 sm:mt-14 scroll-mt-24">
       <Cmd cmd="ls projects/ --detail" />
 
-      {/* Mobile: stacked cards */}
       <div className="sm:hidden mt-5 flex flex-col gap-2.5">
         {PROJECTS.map((p) => (
           <Link
@@ -30,7 +29,6 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* Tablet/Desktop: rows */}
       <div className="hidden sm:block mt-5 border-t border-term-border">
         {PROJECTS.map((p) => (
           <Link
@@ -57,5 +55,5 @@ export default function Projects() {
         ))}
       </div>
     </section>
-  );
+  )
 }

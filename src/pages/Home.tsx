@@ -1,12 +1,12 @@
-import Hero from "../components/Hero.jsx";
-import Photo from "../components/Photo.jsx";
-import StatsBlock from "../components/StatsBlock.jsx";
-import About from "../components/About.jsx";
-import Skills from "../components/Skills.jsx";
-import Experience from "../components/Experience.jsx";
-import Education from "../components/Education.jsx";
-import Projects from "../components/Projects.jsx";
-import Contact from "../components/Contact.jsx";
+import Hero from "../components/Hero"
+import Photo from "../components/Photo"
+import StatsBlock from "../components/StatsBlock"
+import About from "../components/About"
+import Skills from "../components/Skills"
+import Experience from "../components/Experience"
+import Education from "../components/Education"
+import Projects from "../components/Projects"
+import Contact from "../components/Contact"
 
 export default function Home() {
   return (
@@ -32,5 +32,5 @@ export default function Home() {
       <Projects />
       <Contact />
     </>
-  );
+  )
 }

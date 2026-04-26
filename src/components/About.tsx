@@ -1,14 +1,5 @@
-import Dot, { Cmd } from "./shared.jsx";
-
-const META = [
-  ["name", "Mohammed Abd Al Ati"],
-  ["role", "Full-stack"],
-  ["primary", "Laravel / React"],
-  ["editor", "VS Code"],
-  ["shell", "zsh"],
-  ["location", "Gaza · UTC+03"],
-  ["status", "available"],
-];
+import Dot, { Cmd } from "./shared"
+import { ABOUT_META } from "../data/about"
 
 export default function About() {
   return (
@@ -25,7 +16,7 @@ export default function About() {
             I move fluently between{" "}
             <span className="text-amber-accent">Laravel APIs</span> and{" "}
             <span className="text-amber-accent">React interfaces</span>, designing schemas that scale,
-            endpoints that don't leak, and UIs that feel responsive down to the millisecond.
+            endpoints that don&apos;t leak, and UIs that feel responsive down to the millisecond.
           </p>
           <p className="mb-4">
             I care less about stack debates and more about{" "}
@@ -40,10 +31,10 @@ export default function About() {
         </div>
 
         <div className="font-mono text-sm h-full flex flex-col justify-between lg:border-l lg:border-term-border lg:pl-6">
-          {META.map(([k, v], i) => (
+          {ABOUT_META.map(([k, v], i) => (
             <div
               key={k}
-              className={`flex justify-between items-baseline flex-1 ${i === META.length - 1 ? "" : "border-b border-dotted border-term-border"
+              className={`flex justify-between items-baseline flex-1 ${i === ABOUT_META.length - 1 ? "" : "border-b border-dotted border-term-border"
                 }`}
             >
               <span className="text-term-dimmer tracking-[0.08em]">{k}</span>
@@ -58,5 +49,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  );
+  )
 }

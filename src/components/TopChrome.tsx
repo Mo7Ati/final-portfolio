@@ -1,18 +1,17 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router";
-import { TrafficDots } from "./shared.jsx";
-
-const NAV_ITEMS = ["about", "skills", "experience", "projects", "contact"];
+import { useState, useEffect } from "react"
+import { Link } from "react-router"
+import { NAV_ITEMS } from "../data/site"
+import { TrafficDots } from "./shared"
 
 export default function TopChrome() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    document.body.style.overflow = open ? "hidden" : ""
     return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
+      document.body.style.overflow = ""
+    }
+  }, [open])
 
   return (
     <>
@@ -81,5 +80,5 @@ export default function TopChrome() {
         </div>
       )}
     </>
-  );
+  )
 }

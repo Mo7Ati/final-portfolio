@@ -1,10 +1,46 @@
-export const slugify = (s) =>
+export type ProjectLink = { label: string; url: string }
+
+export type ProjectScreenshot = {
+  src: string
+  caption?: string
+  poster?: string
+}
+
+export type ProjectSection = {
+  title: string
+  description?: string
+  screenshots: ProjectScreenshot[]
+}
+
+export type ProjectMedia = {
+  cover: string
+  gallery: string[]
+  video: string
+}
+
+export type Project = {
+  n: string
+  slug: string
+  name: string
+  desc: string
+  tags: string[]
+  role: string
+  year: string
+  summary: string
+  highlights: string[]
+  media: ProjectMedia
+  links: ProjectLink[]
+  sections: ProjectSection[]
+  portrait?: boolean
+}
+
+export const slugify = (s: string) =>
   s
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
+    .replace(/^-|-$/g, "")
 
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
   {
     n: "01",
     slug: "dawly-store",
@@ -268,5 +304,7 @@ export const PROJECTS = [
   },
 ];
 
-export const getProjectBySlug = (slug) =>
-  PROJECTS.find((p) => p.slug === slug);
+export function getProjectBySlug(slug: string | undefined): Project | undefined {
+  if (slug == null) return undefined
+  return PROJECTS.find((p) => p.slug === slug)
+}
