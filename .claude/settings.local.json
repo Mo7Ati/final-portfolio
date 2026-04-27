@@ -8,7 +8,9 @@
       "Bash(cp \"C:/Users/Dawly/Downloads/favicon_io_extracted/favicon-16x16.png\" \"C:/Users/Dawly/OneDrive/سطح المكتب/New folder/final portfolio version/final-portfolio/public/favicon-16x16.png\")",
       "Bash(cp \"C:/Users/Dawly/Downloads/favicon_io_extracted/favicon-32x32.png\" \"C:/Users/Dawly/OneDrive/سطح المكتب/New folder/final portfolio version/final-portfolio/public/favicon-32x32.png\")",
       "Bash(cp \"C:/Users/Dawly/Downloads/favicon_io_extracted/apple-touch-icon.png\" \"C:/Users/Dawly/OneDrive/سطح المكتب/New folder/final portfolio version/final-portfolio/public/apple-touch-icon.png\")",
-      "Bash(cp \"C:/Users/Dawly/Downloads/favicon_io_extracted/android-chrome-192x192.png\" \"C:/Users/Dawly/OneDrive/سطح المكتب/New folder/final portfolio version/final-portfolio/public/android-chrome-192x192.png\")"
+      "Bash(cp \"C:/Users/Dawly/Downloads/favicon_io_extracted/android-chrome-192x192.png\" \"C:/Users/Dawly/OneDrive/سطح المكتب/New folder/final portfolio version/final-portfolio/public/android-chrome-192x192.png\")",
+      "PowerShell(Get-ChildItem \"public\\\\\" -Force | ForEach-Object { $_.Name })",
+      "Bash(git restore *)"
     ]
   }
 }
