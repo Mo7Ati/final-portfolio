@@ -10,7 +10,8 @@
       "Bash(cp \"C:/Users/Dawly/Downloads/favicon_io_extracted/apple-touch-icon.png\" \"C:/Users/Dawly/OneDrive/سطح المكتب/New folder/final portfolio version/final-portfolio/public/apple-touch-icon.png\")",
       "Bash(cp \"C:/Users/Dawly/Downloads/favicon_io_extracted/android-chrome-192x192.png\" \"C:/Users/Dawly/OneDrive/سطح المكتب/New folder/final portfolio version/final-portfolio/public/android-chrome-192x192.png\")",
       "PowerShell(Get-ChildItem \"public\\\\\" -Force | ForEach-Object { $_.Name })",
-      "Bash(git restore *)"
+      "Bash(git restore *)",
+      "Bash(unzip -o \"icons8-stack-color-favicons.zip\" -d \"icons8-stack-extracted/\")"
     ]
   }
 }
