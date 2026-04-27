@@ -80,9 +80,9 @@ export const PROJECTS: Project[] = [
       video: "",
     },
     links: [
-      { label: "Storefront", url: "https://dawly.store" },
-      { label: "Admin dashboard", url: "https://manage.dawly.store/admin" },
-      { label: "Store dashboard", url: "https://manage.dawly.store/store" },
+      // { label: "Storefront", url: "https://dawly.store" },
+      // { label: "Admin dashboard", url: "https://manage.dawly.store/admin" },
+      // { label: "Store dashboard", url: "https://manage.dawly.store/store" },
       { label: "GitHub · frontend", url: "https://github.com/Mo7Ati/dawlyStore_frontend" },
       { label: "GitHub · backend", url: "https://github.com/Mo7Ati/dawlyStor_backend" },
     ],
