@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(npx vite *)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(unzip -o \"favicon_io \\(2\\).zip\" -d \"favicon_io_extracted\")",
+      "Bash(cp \"C:/Users/Dawly/Downloads/favicon_io_extracted/favicon.ico\" \"C:/Users/Dawly/OneDrive/سطح المكتب/New folder/final portfolio version/final-portfolio/public/favicon.ico\")",
+      "Bash(cp \"C:/Users/Dawly/Downloads/favicon_io_extracted/favicon-16x16.png\" \"C:/Users/Dawly/OneDrive/سطح المكتب/New folder/final portfolio version/final-portfolio/public/favicon-16x16.png\")",
+      "Bash(cp \"C:/Users/Dawly/Downloads/favicon_io_extracted/favicon-32x32.png\" \"C:/Users/Dawly/OneDrive/سطح المكتب/New folder/final portfolio version/final-portfolio/public/favicon-32x32.png\")",
+      "Bash(cp \"C:/Users/Dawly/Downloads/favicon_io_extracted/apple-touch-icon.png\" \"C:/Users/Dawly/OneDrive/سطح المكتب/New folder/final portfolio version/final-portfolio/public/apple-touch-icon.png\")",
+      "Bash(cp \"C:/Users/Dawly/Downloads/favicon_io_extracted/android-chrome-192x192.png\" \"C:/Users/Dawly/OneDrive/سطح المكتب/New folder/final portfolio version/final-portfolio/public/android-chrome-192x192.png\")"
     ]
   }
 }
